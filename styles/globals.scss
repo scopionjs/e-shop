@@ -1,0 +1,393 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+$scent: #fe4c50;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+nav {
+  width: 100%;
+  height: 80px;
+  box-shadow: 1px 2px 9px black;
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    .item:nth-child(1) {
+      flex: 1;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      a {
+        h1 {
+          text-transform: uppercase;
+          font-size: xx-large;
+          &::after {
+            content: "shop";
+            color: $scent;
+            text-transform: uppercase;
+            font-size: xx-large;
+          }
+        }
+      }
+    }
+    .item:nth-child(2) {
+      flex: 2;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      input {
+        width: 60%;
+        height: 50%;
+        outline-style: none;
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+        caret-color: $scent;
+      }
+      button {
+        width: 19%;
+        height: 50%;
+        background-color: $scent;
+        color: whitesmoke;
+        border-style: none;
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+        cursor: pointer;
+        font-weight: bolder;
+      }
+    }
+    .item:nth-child(3) {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-around;
+      div {
+        flex: 1;
+
+        div {
+          position: relative;
+          width: 60px;
+          button {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            margin-block: auto;
+            border-style: none;
+            cursor: pointer;
+            color: $scent;
+          }
+          span {
+            color: whitesmoke;
+            background-color: $scent;
+            position: absolute;
+            height: 17px;
+            width: 17px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 12px;
+            top: 4px;
+            left: 28px;
+          }
+        }
+      }
+      a {
+        flex: 1;
+        &:hover {
+          color: $scent;
+        }
+      }
+    }
+  }
+}
+.intro {
+  min-height: calc(100vh - 80px);
+  max-height: auto;
+  background-image: url("../public/cover.webp");
+  background-attachment: scroll;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  div {
+    width: 50%;
+
+    margin-left: 10%;
+    margin-block: 12%;
+    h2 {
+      font-size: 12px;
+      font-family: sans-serif;
+      font-weight: 400;
+    }
+    p {
+      font-size: 60px;
+      font-weight: 400;
+      font-family: sans-serif;
+    }
+    button {
+      border-style: none;
+      background-color: $scent;
+      color: whitesmoke;
+      height: 37px;
+      width: 130px;
+      border-radius: 7px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+}
+.category {
+  display: flex;
+  justify-content: space-around;
+  width: 85%;
+  margin-inline: auto;
+  margin-block: 20px;
+  flex-wrap: wrap;
+  div {
+    position: relative;
+    width: 30%;
+    height: 260px;
+    div {
+      position: absolute;
+      background: whitesmoke;
+      width: 80%;
+      margin-inline: 10%;
+      height: 20%;
+      margin-block: 40%;
+      cursor: pointer;
+
+      p {
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: 20px;
+        text-transform: uppercase;
+        &:hover {
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+.products {
+  section {
+    text-align: center;
+    p {
+      font-size: 35px;
+      font-family: sans-serif;
+      font-weight: 550;
+      opacity: 0.9;
+    }
+    div {
+      width: 55px;
+      height: 5px;
+      background-color: $scent;
+      margin: auto;
+    }
+  }
+  div {
+    div.btns {
+      width: 40%;
+      display: flex;
+      margin-inline: auto;
+      margin-block: 20px;
+
+      button {
+        flex-grow: 1;
+        height: 35px;
+        border-style: none;
+        background-color: white;
+        border: 0.4px rgb(175, 165, 165) solid;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-weight: 500;
+        cursor: pointer;
+      }
+    }
+    div.items-wrapper {
+      width: 85%;
+      margin-inline: auto;
+      margin-block: 15px;
+      cursor: pointer;
+
+      div {
+        display: inline-block;
+        width: 200px;
+        border-right: 1px gray solid;
+        height: 350px;
+        position: relative;
+        a {
+          text-align: center;
+          display: block;
+          p {
+            font-weight: 600;
+            color: #000;
+          }
+        }
+        p {
+          color: $scent;
+          text-align: center;
+          font-weight: bold;
+        }
+        button {
+          position: absolute;
+          bottom: 0;
+          height: 30px;
+          width: 100%;
+          background-color: $scent;
+          border-style: none;
+          color: white;
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+        div {
+          position: relative;
+          width: 100%;
+          height: 60%;
+          border: none;
+        }
+      }
+    }
+  }
+}
+.deals {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  background-image: url("../public/deals.png");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-color: #f2f2f2;
+  div {
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 10%;
+
+    div.item1 {
+      width: 100%;
+      margin: 0%;
+      p {
+        font-size: 45px;
+        font-weight: 600;
+        text-align: center;
+      }
+      div {
+        margin: auto;
+        width: 100px;
+        height: 8px;
+        background-color: $scent;
+      }
+    }
+    div.item2 {
+      margin: 0;
+      width: 100%;
+      margin-top: 20px;
+      text-align: center;
+
+      div {
+        margin: 0;
+        display: inline-block;
+        width: 90px;
+        height: 90px;
+        background-color: white;
+        border-radius: 50%;
+        margin-left: 10px;
+        p {
+          color: $scent;
+          font-weight: 900;
+          font-size: 20px;
+        }
+        span {
+          display: block;
+          position: relative;
+          bottom: 4px;
+          text-transform: capitalize;
+          font-weight: 400;
+          opacity: 0.8;
+        }
+      }
+    }
+    div.item3 {
+      margin: 0;
+      width: 100%;
+      margin-top: 30px;
+      button {
+        width: 20%;
+        height: 40px;
+        margin-inline: 40%;
+        background-color: $scent;
+        color: white;
+        font-family: sans-serif;
+        font-weight: bold;
+        border-style: none;
+
+        cursor: pointer;
+      }
+    }
+  }
+}
+.news-letter {
+  margin-top: 40px;
+  display: flex;
+  background-color: #f2f2f2;
+  div:nth-child(1) {
+    flex: 1;
+    text-align: center;
+    padding-bottom: 15px;
+    p {
+      font-size: 25px;
+      font-weight: 700;
+    }
+    span {
+      font-size: 16px;
+      font-weight: bolder;
+      opacity: 0.8;
+    }
+  }
+  div:nth-child(2) {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    input {
+      width: 50%;
+      height: 40px;
+      caret-color: $scent;
+      font-weight: 900;
+      outline-style: none;
+    }
+    button {
+      width: 20%;
+      height: 40px;
+      background-color: $scent;
+      color: white;
+      border-style: none;
+      cursor: pointer;
+    }
+  }
+}
+footer {
+  height: 40vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 13px;
+  opacity: 0.7;
+  span {
+    color: $scent;
+    text-transform: uppercase;
+  }
+}
